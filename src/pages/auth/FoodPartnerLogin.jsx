@@ -12,10 +12,14 @@ const FoodPartnerLogin = () => {
 
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-    const response = await axios.post("http://localhost:3000/api/auth/food-partner/login", {
+      console.log("Email:", email),
+      console.log("Password:", password);
+    console.log(import.meta.env.VITE_BACKEND_BASE_URL);
+    const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/auth/food-partner/login`, {
       email,
-      password
+      password,
+      
+
     }, { withCredentials: true });
 
     console.log(response.data);

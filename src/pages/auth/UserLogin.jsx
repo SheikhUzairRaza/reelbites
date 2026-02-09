@@ -12,8 +12,8 @@ const UserLogin = () => {
 
     const email = e.target.email.value;
     const password = e.target.password.value;
-
-    const response = await axios.post("http://localhost:3000/api/auth/user/login", {
+    console.log(import.meta.env.VITE_BACKEND_BASE_URL);
+    const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/auth/user/login`, {
       email,
       password
     }, { withCredentials: true });
