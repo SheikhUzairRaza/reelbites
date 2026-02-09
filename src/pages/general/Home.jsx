@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+// import Docs from 'Docs';
 import '../../styles/reels.css'
 import ReelFeed from '../../components/ReelFeed'
 
@@ -45,12 +47,28 @@ const Home = () => {
     }
 
     return (
+        <>
+        
+       <div style={{
+    position: "relative",
+    zIndex: 1000,
+    padding: "10px",
+    textAlign: "center",
+    background: "white"
+}}>
+    <Link to="/docs">
+        <button>Docs</button>
+    </Link>
+</div>
+
+        
         <ReelFeed
             items={videos}
             onLike={likeVideo}
             onSave={saveVideo}
             emptyMessage="No videos available."
         />
+        </>
     )
 }
 
