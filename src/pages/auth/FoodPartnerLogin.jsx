@@ -12,9 +12,6 @@ const FoodPartnerLogin = () => {
 
     const email = e.target.email.value;
     const password = e.target.password.value;
-      console.log("Email:", email),
-      console.log("Password:", password);
-    console.log(import.meta.env.VITE_BACKEND_BASE_URL);
     const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/auth/food-partner/login`, {
       email,
       password,
