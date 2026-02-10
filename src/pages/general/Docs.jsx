@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const Docs = () => {
   return (
@@ -7,13 +8,17 @@ const Docs = () => {
       <p>Welcome! Here you can read how to use the application routes.</p>
 
       <ul>
-        <li>/register → Choose register as normal user or food partner</li>
-        <li>/user/register → User signup</li>
-        <li>/food-partner/register → User signup</li>
-        <li>/user/login for login as user</li>
-        <li>/food-partner/register → Food partner signup</li>
-        <li>/food-partner/login → Food partner login</li>
-      </ul>
+  <li><Link to="/register">/register</Link> → Choose register as normal user or food partner</li>
+
+  <li><Link to="/user/register">/user/register</Link> → User signup</li>
+
+  <li><Link to="/user/login">/user/login</Link> → User login</li>
+
+  <li><Link to="/food-partner/register">/food-partner/register</Link> → Food partner signup</li>
+
+  <li><Link to="/food-partner/login">/food-partner/login</Link> → Food partner login</li>
+</ul>
+
     </div>
   );
 };
