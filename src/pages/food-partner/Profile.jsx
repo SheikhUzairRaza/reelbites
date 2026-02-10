@@ -28,9 +28,6 @@ const Profile = () => {
                         <h1 className="profile-pill profile-business" title="Business name">
                             {profile?.name}
                         </h1>
-                        <p className="profile-pill profile-address" title="Address">
-                            {profile?.address}
-                        </p>
                     </div>
                 </div>
 
