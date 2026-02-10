@@ -13,7 +13,7 @@ const Home = () => {
         axios.get(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/food`, { withCredentials: true })
             .then(response => {
 
-                console.log(response.data);
+                // console.log(response.data);
 
                 setVideos(response.data.foodItems)
             })
@@ -27,10 +27,10 @@ const Home = () => {
         const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASE_URL}/api/food/like`, { foodId: item._id }, {withCredentials: true})
 
         if(response.data.like){
-            console.log("Video liked");
+            // console.log("Video liked");
             setVideos((prev) => prev.map((v) => v._id === item._id ? { ...v, likeCount: v.likeCount + 1 } : v))
         }else{
-            console.log("Video unliked");
+            // console.log("Video unliked");
             setVideos((prev) => prev.map((v) => v._id === item._id ? { ...v, likeCount: v.likeCount - 1 } : v))
         }
         

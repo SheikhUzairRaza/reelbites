@@ -78,7 +78,7 @@ const CreateFood = () => {
         { withCredentials: true },
       )
 
-      console.log(response.data)
+      // console.log(response.data)
       navigate('/')
     } catch (err) {
       console.log('Upload error:', err)
