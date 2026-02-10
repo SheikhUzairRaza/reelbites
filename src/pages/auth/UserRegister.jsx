@@ -12,7 +12,6 @@ const UserRegister = () => {
         e.preventDefault();
 
         const firstName = e.target.firstName.value;
-        console.log(firstName);
         const lastName = e.target.lastName.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
